@@ -31,6 +31,13 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
+        .header_container {
+            background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1614371579_10-p-fon-svetlo-zelenii-s-tsvetami-12.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
         header {
             text-align: center;
             padding: 20px 0;
@@ -57,6 +64,11 @@
             margin: 20px 0;
         }
 
+        IMG.avocado {
+            display: block;
+            margin-left: auto;
+            margin-right: auto }
+
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -78,7 +90,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="header_container">
             <h1>День Екатерины и Кирилла</h1>
             <p>Дата: 18.07.24 | Место: Петергоф, Торговая пл., 5</p>
         </header>
@@ -90,6 +102,9 @@
             <p>Пожалуйста, уведомите нас о вашем присутствии к <strong>01.06.24</strong>.</p>
             <p>С любовью, <br /> Екатерина и Кирилл</p>
         </div>
+        <div class="footer">
+             <img class="avocado" src="img/avocado.jpg" alt="Avocado" />
+        </div>   
     </div>
 </body>
 </html>
