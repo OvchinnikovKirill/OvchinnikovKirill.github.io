@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадебное приглашение</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        @font-face {
+            font-family: 'Marianna';
+            src: url('font/Marianna.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Marianna', cursive; /* Используем шрифт Marianna */
+            font-weight: bold;
             margin: 0;
             padding: 0;
+            background-image: url('img/wallpaper.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
         }
 
         .container {
-            width: 100%;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
         header {
@@ -27,16 +38,17 @@
         }
 
         header h1 {
-            font-size: 36px;
+            font-size: 50px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 40px;
         }
 
         .invitation-content {
             padding: 20px;
             text-align: center;
+            font-size: 40px;
         }
 
         .invitation-content img {
@@ -62,7 +74,6 @@
                 padding: 10px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -73,10 +84,8 @@
         </header>
         <div class="invitation-content">
             <h2>Дорогие друзья!</h2>
-            <p>Мы счастливы объявить, что <strong>Екатерина</strong> и <strong>Кирилл</strong> объединят свои
-                сердца в священном союзе брака. Мы приглашаем вас разделить с нами этот радостный момент нашей жизни.</p>
-            <p>Присоединитесь к нам в этот особенный день, наполненный любовью, смехом и радостью. Будем рады видеть вас
-                на нашей свадьбе.</p>
+            <p>Мы счастливы объявить, что <strong>Екатерина</strong> и <strong>Кирилл</strong> объединят свои сердца в священном союзе брака. Мы приглашаем вас разделить с нами этот радостный момент нашей жизни.</p>
+            <p>Присоединитесь к нам в этот особенный день, наполненный любовью, смехом и радостью. Будем рады видеть вас на нашей свадьбе.</p>
             <img src="img/020A1023.jpg" alt="Мы" />
             <p>Пожалуйста, уведомите нас о вашем присутствии к <strong>01.06.24</strong>.</p>
             <p>С любовью, <br /> Екатерина и Кирилл</p>
