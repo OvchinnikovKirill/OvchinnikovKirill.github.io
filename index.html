@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=abebb03e-01d7-49d1-8b14-3246e9d64568&lang=ru_RU" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадебное приглашение</title>
@@ -106,5 +107,53 @@
              <img class="avocado" src="img/avocado.jpg" alt="Avocado" />
         </div>   
     </div>
+    <div class="container">
+        <div id="map1" style="width: 100%; height: 400px;"></div> <!-- контейнер для первой карты -->
+    </div>
+    <!-- скрипт, который загружает API Яндекс Карт и инициализирует первую карту -->
+    <script>
+        ymaps.ready(function(){
+            var myMap1 = new ymaps.Map("map1", {
+                center: [59.878184, 29.913514], // координаты центра первой карты
+                zoom: 16 // уровень масштаба
+            });
+
+        // Создаем метку на первой карте
+        var placemark1 = new ymaps.Placemark(myMap1.getCenter(), {
+            hintContent: 'Наша свадьба',
+            balloonContent: 'ЗАГС Петергоф<br>Адрес: ул. Центральная, д.10<br>Время: 15:20'
+        });
+
+        // Добавляем метку на первую карту
+        myMap1.geoObjects.add(placemark1);
+
+        // Вызываем событие "клик" на метку (делаем ее активной)
+        placemark1.events.fire('click');
+        });
+    </script>
+
+    <div class="container">
+        <div id="map2" style="width: 100%; height: 400px;"></div> <!-- контейнер для второй карты -->
+    </div>
+    <!-- скрипт, который загружает API Яндекс Карт и инициализирует вторую карту -->
+    <script>
+        ymaps.ready(function(){
+            var myMap2 = new ymaps.Map("map2", {
+                center: [59.933174, 30.314590], // координаты центра второй карты
+                zoom: 16 // уровень масштаба
+            });
+        // Создаем метку на второй карте
+        var placemark2 = new ymaps.Placemark(myMap2.getCenter(), {
+            hintContent: 'Наша свадьба',
+            balloonContent: 'Culinarion<br>кнопка EventyOn<br>6 этаж'
+        });
+
+        // Добавляем метку на вторую карту
+        myMap2.geoObjects.add(placemark2);
+
+        // Вызываем событие "клик" на метку (делаем ее активной)
+        placemark2.events.fire('click');
+        });
+    </script>
 </body>
 </html>
