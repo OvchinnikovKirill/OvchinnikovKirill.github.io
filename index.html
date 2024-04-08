@@ -13,8 +13,8 @@
             font-style: normal;
         }
         body {
-            font-family: 'Marianna', cursive; /* Используем шрифт Marianna */
-            font-weight: bold;
+            font-family: 'Ariel', cursive;  Используем шрифт Marianna 
+           /* font-weight: bold;*/
             margin: 0;
             padding: 0;
             background-image: url('img/wallpaper.png');
@@ -40,23 +40,31 @@
         }
 
         header {
+            font-family: 'Marianna', cursive; /* Используем шрифт Marianna */
+            font-weight: bold;
             text-align: center;
             padding: 20px 0;
             background-color: #ffdb58;
         }
 
         header h1 {
+            font-size: 70px;
+        }
+
+        h2 {
+            font-family: 'Marianna', cursive; /* Используем шрифт Marianna */
+            font-weight: bold;
             font-size: 50px;
         }
 
         header p {
-            font-size: 40px;
+            font-size: 45px;
         }
 
         .invitation-content {
             padding: 20px;
             text-align: center;
-            font-size: 40px;
+            font-size: 30px;
         }
 
         .invitation-content img {
@@ -68,7 +76,12 @@
         IMG.avocado {
             display: block;
             margin-left: auto;
-            margin-right: auto }
+            margin-right: auto; 
+        }
+
+        .footer {
+            background-color: #fff;
+        }
 
         @media (max-width: 600px) {
             .container {
@@ -87,6 +100,28 @@
                 padding: 10px;
             }
         }
+
+        .color_circle {
+            background-color: #fff;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .color_girl1 { background-color: #FEE3AC; }
+        .color_girl2 { background-color: #FAD6C0; }
+        .color_girl3 { background-color: #FEF1F8; }
+        .color_girl4 { background-color: #AEDCF6; }
+
+        .color_boy1 { background-color: #FFFFFF;  border: 2px solid black;}
+        .color_boy2 { background-color: #9BA0A4; }
+        .color_boy3 { background-color: #1C2536; }
+        .color_boy4 { background-color: #000002; }
     </style>
 </head>
 <body>
@@ -108,6 +143,9 @@
         </div>   
     </div>
     <div class="container">
+        <div class="invitation-content">
+            <h2>Торжественная регистрация брака состоится <br /> 18 июля 2024 года в <strong>15:20:</strong></h2>
+        </div>
         <div id="map1" style="width: 100%; height: 400px;"></div> <!-- контейнер для первой карты -->
     </div>
     <!-- скрипт, который загружает API Яндекс Карт и инициализирует первую карту -->
@@ -133,7 +171,29 @@
     </script>
 
     <div class="container">
+        <div class="invitation-content">
+            <h2>Праздничный банкет состоится в 18:00 в кулинарной студии <span style="color: #940084; font-family: ‘Intro,sans-serif’, cursive !important; font-size: 40px;">CULINARYON</span>:</font></h2>
+        </div>
         <div id="map2" style="width: 100%; height: 400px;"></div> <!-- контейнер для второй карты -->
+        <div class="invitation-content">
+            <p>У нас планируется активный и насыщенный вечер. Мы вместе приготовим вкусные блюда и узнаем секреты их приготовления. Пожалуйста, позаботьтесь об удобной обуви на вечер.</p>
+            <br />
+            <p>Для нас самое главное – ваше присутствие!</p>
+            <h2>Дресс-код</h2>
+            <p>Мы создаем наш свадебный день с особым трепетом. И нам будем приятно, если вы поддержите цветовую гамму нашей свадьбы: </p>
+            <div class="color_circle">
+                <p>Для леди:</p>
+                <div class="circle color_girl1"></div>
+                <div class="circle color_girl2"></div>
+                <div class="circle color_girl3"></div>
+                <div class="circle color_girl4"></div>
+                <p>Для джентельменов:</p>
+                <div class="circle color_boy1"></div>
+                <div class="circle color_boy2"></div>
+                <div class="circle color_boy3"></div>
+                <div class="circle color_boy4"></div>
+            </div>
+        </div>
     </div>
     <!-- скрипт, который загружает API Яндекс Карт и инициализирует вторую карту -->
     <script>
