@@ -12,8 +12,23 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        @font-face {
+            font-family: 'PoiretOne';
+            src: url('font/PoiretOne-Regular.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'arial';
+            src: url('font/Arial-ItalicMT.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font-family: 'Ariel', cursive;  Используем шрифт Marianna 
+            font-family: 'arial', cursive;  Используем шрифт Marianna 
            /* font-weight: bold;*/
             margin: 0;
             padding: 0;
@@ -54,11 +69,11 @@
         h2 {
             font-family: 'Marianna', cursive; /* Используем шрифт Marianna */
             font-weight: bold;
-            font-size: 50px;
+            font-size: 60px;
         }
 
         header p {
-            font-size: 45px;
+            font-size: 60px;
         }
 
         .invitation-content {
@@ -129,20 +144,65 @@
 
         .color_boy1 { background-color: #FFFFFF;  border: 2px solid black;}
         .color_boy2 { background-color: #9BA0A4; }
-        .color_boy3 { background-color: #1C2536; }
+        .color_boy3 { background-color: #00386B; }
         .color_boy4 { background-color: #000002; }
+
+        
+        .menu-container {
+            position: fixed;
+        }
+
+        #menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            width: 200px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #menu li {
+            margin-bottom: 10px;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #333;
+        }
+
+
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="menu-container">
+        <button id="toggleMenu">☰ Меню</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="#section1">Приветствие</a></li>
+                <li><a href="#section2">ЗАГС</a></li>
+                <li><a href="#section3">Банкет</a></li>
+                <li><a href="#section4">Дресс-код</a></li>
+                <li><a href="#section5">Подарки</a></li>
+                <li><a href="#section6">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+    <div class="container" id="section1">
         <header class="header_container">
-            <h1>День Екатерины и Кирилла</h1>
-            <p>Дата: 18.07.24 | Место: Петергоф, Торговая пл., 5</p>
+            <h1>Екатерина и Кирилл<br />Дата: 18.07.24 15:20 <br /> Петергоф, Торговая пл., 5</p>
         </header>
         <div class="invitation-content">
             <h2>Дорогие друзья!</h2>
-            <p>Мы счастливы объявить, что <strong>Екатерина</strong> и <strong>Кирилл</strong> объединят свои сердца в священном союзе брака. Мы приглашаем вас разделить с нами этот радостный момент нашей жизни.</p>
-            <p>Присоединитесь к нам в этот особенный день, наполненный любовью, смехом и радостью. Будем рады видеть вас на нашей свадьбе.</p>
+            <p>В нашей жизни есть счастливые и радостные моменты, которые хочется разделить с дорогими людьми. Мы приглашаем вас открыть вместе с нами новую страницу книги нашей жизни.</p>
+            <p>Мы будем счастливы увидеть вас на торжестве по случаю нашей свадьбы и разделить этот важный момент вместе с нами.</p>
             <img src="img/020A1023.jpg" alt="Мы" />
             <p>Пожалуйста, уведомите нас о вашем присутствии к <strong>01.06.24</strong>.</p>
             <p>С любовью, <br /> Екатерина и Кирилл</p>
@@ -151,9 +211,9 @@
              <img class="avocado" src="img/avocado.jpg" alt="Avocado" />
         </div>   
     </div>
-    <div class="container">
+    <div class="container" id="section2">
         <div class="invitation-content">
-            <h2>Торжественная регистрация брака состоится <br /> 18 июля 2024 года в <strong>15:20</strong></h2>
+            <p>Торжественная регистрация брака состоится <br /> 18 июля 2024 года в 15:20</p>
         </div>
         <div id="map1" style="width: 100%; height: 400px;"></div> <!-- контейнер для первой карты -->
     </div>
@@ -179,11 +239,13 @@
         });
     </script>
 
-    <div class="container">
+    <div class="container" id="section3">
         <div class="invitation-content">
-            <h2>Праздничный банкет состоится в 18:00 в кулинарной студии <span style="color: #940084; font-family: ‘Intro,sans-serif’, cursive !important; font-size: 40px;">CULINARYON</span></font></h2>
+            <p>Праздничный банкет состоится в 18:00 в кулинарной студии <span style="color: #940084; font-family: ‘Intro,sans-serif’, cursive !important; font-size: 40px;">CULINARYON</span></font></p>
         </div>
         <div id="map2" style="width: 100%; height: 400px;"></div> <!-- контейнер для второй карты -->
+    </div>
+    <div class="container" id="section4">
         <div class="invitation-content">
             <p>У нас планируется активный и насыщенный вечер. Мы вместе приготовим вкусные блюда и узнаем секреты их приготовления. Пожалуйста, позаботьтесь об удобной обуви на вечер.</p>
             <br />
@@ -214,7 +276,7 @@
         // Создаем метку на второй карте
         var placemark2 = new ymaps.Placemark(myMap2.getCenter(), {
             hintContent: 'Наша свадьба',
-            balloonContent: 'Culinarion<br>кнопка EventyOn<br>6 этаж'
+            balloonContent: 'Culinaryon<br>Наб. Мойки д. 73<br>кнопка EventyOn<br>6 этаж'
         });
 
         // Добавляем метку на вторую карту
@@ -224,5 +286,27 @@
         placemark2.events.fire('click');
         });
     </script>
+    <div class="container" id="section5">
+        <div class="invitation-content">
+            <h2>Подарки</h2>
+            <p>
+                В качестве подарка будем благодарны за любой, даже символический, вклад в бюджет нашей молодой семьи.
+                Мы знаем как вы за нас рады и будем счастливы, если вы захватите с собой отличное настроение и слезы умиления, а букеты замените на бутылки с вкусным вином, медовухой или сидром.
+                Если же ваше сердце жаждет преподнести именно цветы, то просим сделать выбор в пользу одной белой розы. В итоге у нас получится один роскошный букет.
+            </p>
+        </div>
+    </div>
+    <div class="container" id="section6">
+        <div class="invitation-content">
+            <h2>Контакты</h2>
+            <p>
+                В день свадьбы по всем вопросам можете обратиться к нашим свидетелям:<br />
+                Анна: <a href="tel:+79214497117">+7 921 449 71 17</a><br />
+                Виктор: <a href="tel:+79215956050">+7 921 595 60 50</a>
+            </p>
+        </div>
+    </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
