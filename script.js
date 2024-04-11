@@ -7,7 +7,7 @@ document.addEventListener('click', function(event) {
     var menu = document.getElementById('menu');
     var toggleMenuButton = document.getElementById('toggleMenu');
     var isClickInsideMenu = menu.contains(event.target);
-    var isClickOnToggleMenuButton = (event.target === toggleMenuButton);
+    var isClickOnToggleMenuButton = (event.target === toggleMenuButton || toggleMenuButton.contains(event.target));
 
     if (!isClickInsideMenu && !isClickOnToggleMenuButton) {
         menu.style.display = 'none';

@@ -157,9 +157,9 @@
             top: 100%;
             left: 0;
             z-index: 1;
-            width: 200px;
-            background-color: #f2f2f2;
-            padding: 20px;
+            /*width: 200px;*/
+           /* background-color: #f2f2f2;*/
+            /*padding: 20px;*/
             display: none;
         }
 
@@ -177,12 +177,20 @@
             color: #333;
         }
 
+        #toggleMenu .icon {
+          background:url(img/avocado-avocado-dance.gif) no-repeat 5px;
+          background-size: cover;
+          background-position: left;
+          padding:5px 5px 5px 27px;
+        }
+
 
     </style>
 </head>
 <body>
-    <div class="menu-container">
-        <button id="toggleMenu">☰ Меню</button>
+    <div class="menu-container" id="menu-container">
+        <!--button id="toggleMenu" type='submit'>☰ Меню</button-->
+        <button id="toggleMenu"><span class="icon">&nbsp;</span><span class="text">Меню</span></button>
         <nav id="menu">
             <ul>
                 <li><a href="#section1">Приветствие</a></li>
