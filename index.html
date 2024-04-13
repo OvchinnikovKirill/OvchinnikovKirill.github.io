@@ -186,6 +186,20 @@
           padding:5px 5px 5px 27px;
         }
 
+         .countdown {
+             display: inline-block;
+             justify-content: center;
+             font-family: Marianna;
+         }
+
+         .countdown-item {
+             display: inline;
+
+         }
+
+         .countdown-item span {
+            font-size: 60px;
+         }
 
     </style>
 </head>
@@ -208,6 +222,25 @@
     <div class="container" id="section1">
         <header class="header_container">
             <h1>Екатерина и Кирилл<br />Дата: 18.07.24 15:20 <br /> Петергоф, Торговая пл., 5</p>
+             <div class="countdown">
+                 <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="label">Дней</span>
+                 </div>
+                 <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="label">Часов</span>
+                 </div>
+                 <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="label">Минут</span>
+                 </div>
+                 <div class="countdown-item">
+                     <span id="seconds">00</span>
+                  <span class="label">Секунд</span>
+                 </div>
+             </div>
+            <script src="script.js"></script>
         </header>
         <div class="invitation-content">
             <h2>Дорогие друзья!</h2>
