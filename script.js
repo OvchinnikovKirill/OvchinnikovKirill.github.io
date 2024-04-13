@@ -15,7 +15,7 @@ document.addEventListener('click', function(event) {
 });
 
 
- function updateCountdown() {
+function updateCountdown() {
      const targetDate = new Date("2024-07-18T15:20:00");
      const now = new Date();
      const remainingTime = targetDate - now;
